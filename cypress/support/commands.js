@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+// Adding a custom command to Cypress for getting elements by their ID
 Cypress.Commands.add('getById', (id) => {
-    cy.get(`#${id}`)
-})
+    // Use the built-in cy.get() method to select an element by its ID
+    cy.get(`#${id}`);
+});
